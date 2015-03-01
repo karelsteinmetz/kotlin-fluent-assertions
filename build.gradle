@@ -1,0 +1,44 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'kotlin'
+    group = 'com.kotlinfluentassertions'
+    version = '0.0.1.0'
+}
+
+sourceCompatibility = 1.5
+
+buildscript {
+    ext.kotlin_version = '0.10.770'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+subprojects {
+
+    repositories {
+        mavenCentral()
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    buildscript {
+        repositories {
+            mavenCentral()
+        }
+        dependencies {
+        }
+    }
+
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        testCompile 'junit:junit:4.11'
+    }
+}

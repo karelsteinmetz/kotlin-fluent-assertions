@@ -1,0 +1,4 @@
+rootProject.name = 'kotlin-fluent-assertions'
+
+include 'kotlin-fluent-assertions-core'
+
