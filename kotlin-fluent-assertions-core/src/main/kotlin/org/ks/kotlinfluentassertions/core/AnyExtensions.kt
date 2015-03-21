@@ -1,4 +1,4 @@
-package com.kotlinfluentassertions.core
+package org.ks.kotlinfluentassertions.core
 
 
 fun Any.should(): ShouldValueHolder {

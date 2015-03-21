@@ -1,7 +1,7 @@
 allprojects {
     apply plugin: 'java'
     apply plugin: 'kotlin'
-    group = 'com.kotlinfluentassertions'
+    group = 'org.ks.kotlinfluentassertions'
     version = '0.0.1.0'
 }
 
