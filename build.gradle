@@ -1,8 +1,9 @@
 allprojects {
     apply plugin: 'java'
     apply plugin: 'kotlin'
+    apply plugin: 'maven'
     group = 'org.ks.kotlinfluentassertions'
-    version = '0.0.1.0'
+    version = '0.0.1.0-SNAPSHOT'
 }
 
 buildscript {
@@ -38,5 +39,19 @@ subprojects {
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
         testCompile 'junit:junit:4.11'
+    }
+
+    configure(install.repositories.mavenInstaller) {
+        pom.project {
+            inceptionYear '2015'
+            packaging 'jar'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
     }
 }
