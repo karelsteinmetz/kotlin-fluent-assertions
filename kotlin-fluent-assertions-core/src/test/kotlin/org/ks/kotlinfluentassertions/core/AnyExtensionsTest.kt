@@ -9,4 +9,9 @@ public class AnyExtensionsTest {
     fun shouldBeAssertsThatAreEqual() {
         "value".should().be("value")
     }
+
+    Test
+    fun assertsThatIsInstanceOf() {
+        "value".should().beInstanceOf<String> { s -> s.should().be("value") }
+    }
 }

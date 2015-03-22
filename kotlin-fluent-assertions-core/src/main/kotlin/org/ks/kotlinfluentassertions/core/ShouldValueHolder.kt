@@ -7,4 +7,8 @@ class ShouldValueHolder(var value: Any) {
     public fun be<T>(v: T) {
         assertEquals(value, v)
     }
+
+    public fun beInstanceOf<T>(assertCallback: (v: T) -> Unit) {
+        assertCallback(value as T)
+    }
 }
