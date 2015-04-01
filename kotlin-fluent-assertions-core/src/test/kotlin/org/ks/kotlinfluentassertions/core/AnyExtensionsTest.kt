@@ -8,19 +8,29 @@ public class AnyExtensionsTest {
 
     Test
     fun shouldBeAssertsThatAreEqual() {
-        "value".should().be("value")
+        val testFixture = TestFixture("AValue")
+
+        testFixture.should().be(testFixture)
     }
 
     Test
     fun assertsThatIsInstanceOf() {
-        "value".should().beInstanceOf<String> { s -> s.should().be("value") }
+        val testFixture = TestFixture("AValue")
+
+        testFixture.should().beInstanceOf<TestFixture> {
+            s ->
+            s.property.should().be("AValue")
+        }
     }
 
     Test
     fun returnMessageIsInCorrectFormat() {
         failsWith(javaClass<AssertionError>(), {
-            "value".should().be("otherValue")
+            TestFixture("AValue").should().be(TestFixture("AnOtherValue"))
         }).getMessage()!!
-                .should().be(". Expected <otherValue> actual <value>")
+                .should().be(". Expected <TestFixture(property=AnOtherValue)> actual <TestFixture(property=AValue)>")
+    }
+
+    data class TestFixture(var property: String) {
     }
 }

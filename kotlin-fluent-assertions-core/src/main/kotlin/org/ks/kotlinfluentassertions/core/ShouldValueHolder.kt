@@ -3,9 +3,9 @@ package org.ks.kotlinfluentassertions.core
 import kotlin.test.assertEquals
 
 
-class ShouldValueHolder(var value: Any) {
+open class ShouldValueHolder<T>(var value: T) {
     public fun be<T>(v: T) {
-        assertEquals(v, value)
+        assertEquals(v: Any, value)
     }
 
     public fun beInstanceOf<T>(assertCallback: (v: T) -> Unit) {
