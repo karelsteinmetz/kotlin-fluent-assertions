@@ -1,6 +1,8 @@
-package org.ks.kotlinfluentassertions.core.boolean
+package org.ks.kotlinfluentassertions.core
 
 import org.ks.kotlinfluentassertions.core.ShouldValueHolder
+import java.lang
+import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 

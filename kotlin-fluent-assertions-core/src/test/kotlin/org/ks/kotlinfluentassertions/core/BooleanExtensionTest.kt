@@ -1,4 +1,4 @@
-package org.ks.kotlinfluentassertions.core.boolean
+package org.ks.kotlinfluentassertions.core
 
 import org.junit.Test
 
