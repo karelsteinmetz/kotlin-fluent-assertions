@@ -1,6 +1,6 @@
-package org.ks.kotlinfluentassertions.core.string
+package cz.krlst.kotlin.fluentassertions.core.string
 
-import org.ks.kotlinfluentassertions.core.string.StringShouldValueHolder
+import cz.krlst.kotlin.fluentassertions.core.string.StringShouldValueHolder
 import kotlin.test.assertNotNull
 
 

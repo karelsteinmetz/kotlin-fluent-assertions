@@ -1,4 +1,4 @@
-package org.ks.kotlinfluentassertions.core
+package cz.krlst.kotlin.fluentassertions.core
 
 import org.junit.Test
 

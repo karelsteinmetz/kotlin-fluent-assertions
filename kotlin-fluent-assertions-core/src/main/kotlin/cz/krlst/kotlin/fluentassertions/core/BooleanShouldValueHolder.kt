@@ -1,6 +1,6 @@
-package org.ks.kotlinfluentassertions.core
+package cz.krlst.kotlin.fluentassertions.core
 
-import org.ks.kotlinfluentassertions.core.ShouldValueHolder
+import cz.krlst.kotlin.fluentassertions.core.ShouldValueHolder
 import java.lang
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

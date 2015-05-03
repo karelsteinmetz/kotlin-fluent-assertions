@@ -1,6 +1,6 @@
-package org.ks.kotlinfluentassertions.core.string
+package cz.krlst.kotlin.fluentassertions.core.string
 
-import org.ks.kotlinfluentassertions.core.ShouldValueHolder
+import cz.krlst.kotlin.fluentassertions.core.ShouldValueHolder
 import kotlin.test.assertEquals
 
 class StringShouldValueHolder(value: String) : ShouldValueHolder<String>(value) {
