@@ -2,7 +2,8 @@ package cz.krlst.kotlin.fluentassertions.core
 
 import kotlin.test.assertNotNull
 
-fun Boolean?.should(): BooleanShouldValueHolder {
+
+fun Collection<*>?.should(): CollectionValueHolder<*> {
     assertThatIsNotNullableType(this)
-    return BooleanShouldValueHolder(this!!)
+    return CollectionValueHolder(this!!)
 }

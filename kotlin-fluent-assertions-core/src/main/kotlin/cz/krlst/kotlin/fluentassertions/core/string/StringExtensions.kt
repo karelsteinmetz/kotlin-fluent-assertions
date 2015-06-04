@@ -1,10 +1,9 @@
 package cz.krlst.kotlin.fluentassertions.core.string
 
-import cz.krlst.kotlin.fluentassertions.core.string.StringShouldValueHolder
-import kotlin.test.assertNotNull
+import cz.krlst.kotlin.fluentassertions.core.assertThatIsNotNullableType
 
 
 fun String?.should(): StringShouldValueHolder {
-    assertNotNull(this)
+    assertThatIsNotNullableType(this)
     return StringShouldValueHolder(this!!)
 }

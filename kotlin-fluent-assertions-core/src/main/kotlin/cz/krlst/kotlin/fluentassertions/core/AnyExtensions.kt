@@ -4,6 +4,6 @@ import kotlin.test.assertNotNull
 
 
 fun Any?.should(): ShouldValueHolder<Any> {
-    assertNotNull(this)
+    assertThatIsNotNullableType(this)
     return ShouldValueHolder(this!!)
 }
