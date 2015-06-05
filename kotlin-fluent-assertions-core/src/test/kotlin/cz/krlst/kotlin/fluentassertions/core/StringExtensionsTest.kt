@@ -1,4 +1,4 @@
-package cz.krlst.kotlin.fluentassertions.core.string
+package cz.krlst.kotlin.fluentassertions.core
 
 import org.junit.Test
 import kotlin.test.failsWith

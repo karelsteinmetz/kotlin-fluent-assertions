@@ -1,6 +1,5 @@
 package cz.krlst.kotlin.fluentassertions.core
 
-import cz.krlst.kotlin.fluentassertions.core.string.should
 import org.junit.Test
 import org.junit.experimental.runners.Enclosed
 import org.junit.runner.RunWith

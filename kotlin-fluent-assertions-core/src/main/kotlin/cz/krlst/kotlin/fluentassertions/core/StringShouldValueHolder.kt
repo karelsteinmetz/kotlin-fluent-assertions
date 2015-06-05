@@ -1,4 +1,4 @@
-package cz.krlst.kotlin.fluentassertions.core.string
+package cz.krlst.kotlin.fluentassertions.core
 
 import cz.krlst.kotlin.fluentassertions.core.ShouldValueHolder
 import kotlin.test.assertEquals
