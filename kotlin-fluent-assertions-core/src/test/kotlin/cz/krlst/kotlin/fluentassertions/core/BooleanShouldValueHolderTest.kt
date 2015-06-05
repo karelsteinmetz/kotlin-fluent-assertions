@@ -2,7 +2,7 @@ package cz.krlst.kotlin.fluentassertions.core
 
 import org.junit.Test
 
-public class BooleanExtensionTest {
+public class BooleanShouldValueHolderTest {
 
     Test
     fun assertsThatIsTrue() {

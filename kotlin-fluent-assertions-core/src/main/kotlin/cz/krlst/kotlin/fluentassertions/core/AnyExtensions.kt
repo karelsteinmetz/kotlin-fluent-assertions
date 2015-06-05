@@ -3,7 +3,7 @@ package cz.krlst.kotlin.fluentassertions.core
 import kotlin.test.assertNotNull
 
 
-fun Any?.should(): ShouldValueHolder<Any> {
+fun Any?.should(): AnyShouldValueHolder<Any> {
     assertThatIsNotNullableType(this)
-    return ShouldValueHolder(this!!)
+    return AnyShouldValueHolder(this!!)
 }

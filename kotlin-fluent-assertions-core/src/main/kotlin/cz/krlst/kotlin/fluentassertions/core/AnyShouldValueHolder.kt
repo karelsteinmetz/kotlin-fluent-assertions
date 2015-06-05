@@ -5,7 +5,7 @@ import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 
 
-open class ShouldValueHolder<T>(var value: T) {
+open class AnyShouldValueHolder<T>(var value: T) {
     public fun be<T>(expectedValue: T) {
         assertEquals(expectedValue, value)
     }

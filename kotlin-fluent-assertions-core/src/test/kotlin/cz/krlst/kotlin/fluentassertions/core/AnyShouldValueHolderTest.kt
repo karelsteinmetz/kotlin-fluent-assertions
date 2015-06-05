@@ -4,7 +4,7 @@ import org.junit.Test
 import kotlin.test.failsWith
 
 
-public class AnyExtensionsTest {
+public class AnyShouldValueHolderTest {
 
     Test
     fun shouldBeAssertsThatAreEqual() {

@@ -4,7 +4,7 @@ import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 
 
-class CollectionValueHolder<T>(value: Collection<T>) : ShouldValueHolder<Collection<T>>(value) {
+class CollectionValueHolder<T>(value: Collection<T>) : AnyShouldValueHolder<Collection<T>>(value) {
 
     fun beEmpty() {
         assertEquals(0, value.count(), "Current count of values is ${value.count()} but should be 0")
