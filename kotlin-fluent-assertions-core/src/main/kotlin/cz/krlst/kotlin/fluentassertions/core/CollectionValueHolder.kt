@@ -6,20 +6,16 @@ import kotlin.test.assertNotNull
 
 class CollectionValueHolder<T>(value: Collection<T>) : ShouldValueHolder<Collection<T>>(value) {
 
-    fun <T> beEmpty() {
-        val values = value as Iterable<T>
-        assertThatIsNotUnexpectedType(value)
-        assertEquals(0, values.count(), "Current count of values is ${values.count()} but should be 0")
+    fun beEmpty() {
+        assertEquals(0, value.count(), "Current count of values is ${value.count()} but should be 0")
     }
 
-    fun <T> beEquivalentTo(expectedValues: Iterable<T>) {
-        val values = value as Iterable<T>
-        assertThatIsNotUnexpectedType(value)
-        assertEquals(expectedValues.count(), values.count(),
-                """Current count of values is ${values.count()} and expected count of values is ${expectedValues.count()}.
+    fun beEquivalentTo(expectedValues: Iterable<T>) {
+        assertEquals(expectedValues.count(), value.count(),
+                """Current count of values is ${value.count()} and expected count of values is ${expectedValues.count()}.
                 Values in current collection are $value and expected values are $expectedValues.""")
         expectedValues.forEachIndexed { i, ex ->
-            ex.should().be(values.elementAt(i))
+            ex.should().be(value.elementAt(i))
         }
     }
 
